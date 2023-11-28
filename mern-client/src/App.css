@@ -1,0 +1,11 @@
+.home-wrapper{
+   background-image: url("https://i.pinimg.com/564x/97/62/4e/97624e5f54a0ad5a2715351effc17ec0.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}  
+.main{
+   margin: 0 auto;
+   padding:  2rem;
+   border-radius: 10px;
+   color: whitesmoke;
+}
