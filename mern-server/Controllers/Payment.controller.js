@@ -2,10 +2,13 @@ import Razorpay from "razorpay";
 import PAYMENT from "../model/Payment.model.js";
 import Cart from "../model/Cart.model.js";
 import crypto from "crypto"
+import dotenv from "dotenv"
+dotenv.config()
 
 
- const key_id = "rzp_test_Gqw8ROfS2AzFpM"
- const key_secret = "WTwrD2PejRjwMDzkQ7KX9PH2"
+
+ const key_id = `${process.env.RAZORPAY_KEY_ID}`
+ const key_secret = `${process.env.RAZORPAY_SECRET}`
 
 
  

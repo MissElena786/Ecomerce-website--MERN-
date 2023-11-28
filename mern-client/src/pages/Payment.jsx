@@ -80,7 +80,7 @@ console.log(calculation)
 
          const amnt  = Number(amount)
         const options = {
-            key: "rzp_test_Gqw8ROfS2AzFpM", // Enter the Key ID generated from the Dashboard
+            key: `${import.meta.env.RAZORPAY_KEY}`, // Enter the Key ID generated from the Dashboard
             // amount: amount.toString(),
             amount: Number (TotalCalculation * 100 ) ,
             currency: currency,
