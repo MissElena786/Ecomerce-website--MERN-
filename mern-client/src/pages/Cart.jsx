@@ -112,17 +112,17 @@ function Cart() {
 
       <div className='flex flex-wrap justify-center items-center m-5 gap-5'>
         {
-          // cart && cart?.length > 0 &&
+          cart && 
            cart?.length > 0 ?
           cart?.map((ele, idx) =>
           (
 
-            <Card key={ele._id} className="w-full max-w-[50rem] relative flex-row">
+            <Card key={ele?._id} className="w-full max-w-[50rem] relative flex-row">
 
 
               <img
 
-                src={ele.thumbnail}
+                src={ele?.thumbnail}
                 alt="card-image"
                 className="h-[200px] w-[200px] object-cover"
               />
@@ -130,10 +130,10 @@ function Cart() {
 
 
                 <Typography variant="h4" color="blue-gray" className="mb-1">
-                  {ele.title}
+                  {ele?.title}
                 </Typography>
                 <Typography variant="h6" color="gray" className="mb-1  uppercase grid grid-row-3 grid-cols-2">
-                  <p>  ₹	{ele.price} </p>
+                  <p>  ₹	{ele?.price} </p>
 
                   {/* <p className="badge badge-danger">{ele.rating}</p> */}
                   {/* <button className="btn badge w-16 rounded-2xl text-lg font-bold bg-red-500"> */}
@@ -142,8 +142,8 @@ function Cart() {
 
 
 
-                  <p> {ele.category}</p>
-                  <p>{ele.discountPercentage}</p>
+                  <p> {ele?.category}</p>
+                  <p>{ele?.discountPercentage}</p>
                 </Typography>
                 <div className='grid grid-cols-2 text-left '>
                   <div>
@@ -161,13 +161,13 @@ function Cart() {
                       <option value="10" className='p-1 text-center'>10</option>
                     </select>
                   </div>
-                  <p className='border-2 px-2 w-16'>{ele.rating}
+                  <p className='border-2 px-2 w-16'>{ele?.rating}
                     ⭐
                   </p>
                 </div>
                 <Typography color="gray" className="mb-8 font-normal">
                   {
-                    ele.description
+                    ele?.description
                   }
                 </Typography>
                 {/* <Button variant="text" className="flex items-center ">

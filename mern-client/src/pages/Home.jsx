@@ -180,7 +180,7 @@ function Home() {
 
       
       {
-        filterData.length > 0 ? 
+        filterData?.length > 0 ? 
 
          filterData?.map((itm)=>(
           <Card className="mt-6 w-80 pt-10 " key={itm._id}>
@@ -222,21 +222,21 @@ function Home() {
         
         : 
 
-        product.map((ele, ind)=>(
-          <Card className="mt-6 w-80 pt-10 " key={ele._id}>
+        product?.map((ele, ind)=>(
+          <Card className="mt-6 w-80 pt-10 " key={ele?._id}>
       <CardHeader color="blue-gray" className="relative max-h-40 ">
         <img className=''
           // src={ele.images[0]}
-          src={ele.thumbnail}
+          src={ele?.thumbnail}
           alt="card-image"
         />
       </CardHeader>
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">
-          {ele.title}
+          {ele?.title}
         </Typography>
         <Typography>
-         {ele.description}
+         {ele?.description}
         </Typography>
       </CardBody>
       <CardFooter className="pt-0 flex justify-center gap-3">
@@ -246,13 +246,13 @@ function Home() {
         <Button    className="px-3 py-2 bg-red-500 "  onClick={()=> AddProductInCart(ele._id)}> Alredy Aded </Button> 
         :  */}
         
-          <Button className={ "px-3 py-2"} onClick={()=> AddProductInCart(ele._id)} >
+          <Button className={ "px-3 py-2"} onClick={()=> AddProductInCart(ele?._id)} >
              {/* {aded ? "Alredy aded" :  " ADd to cart"} */}
              add to cart
              </Button>
 
 
-        <Button className='px-3 py-2' onClick={()=> displayRazorpay(ele.price)} >Buy Now</Button>
+        <Button className='px-3 py-2' onClick={()=> displayRazorpay(ele?.price)} >Buy Now</Button>
         {/* } */}
 
       </CardFooter>
